@@ -1,0 +1,22 @@
+{% extends "home.html" %}
+{% block content %}
+<div class="userList">
+<h1> UserList</h1>
+<table style="width:100%">
+<tr>
+	<th>UserId</th>
+	<th>UserName</th>
+	<th>EmailId</th>
+	<th>Password</th>
+</tr>
+{% for row in rows %}
+<tr>
+	<td>{{row["id"]}}</td>
+	<td>{{row["username"]}}</td>
+	<td>{{row["emailId"]}}</td>
+	<td>{{row["password"]}}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

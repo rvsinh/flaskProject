@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../static/jquery-latest.js"></script>
+  </head>
+  <style>
+  * {
+    box-sizing: border-box;
+}
+
+  .logo {
+	padding :15px;
+	background-color: #9933cc;
+	color: #ffffff;
+  }
+  /* This part is used to show the option all over the page after login*/
+
+
+.sideList ul {
+	list-style-type: none;
+	padding	:0;
+	marging	:0;
+}
+
+.sideList li {
+	padding	:8px;
+	margin-bottom: 7px;
+	background-color: #33b5e5;
+	color: #ffffff;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.sideList li:hover {
+    background-color: #0099cc;
+}
+
+  .sideList {
+	width	: 20%;
+	float		:left;
+	padding	:25px;
+  }
+  .showOnPage {
+	width	:80%;
+	float		:left;
+  }
+  
+  .row1::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+  </style>
+<body>
+	<center><h1 class="logo">Thermax Software License Management Portal</h1></center>
+	<div>
+	<strong>
+	<nav class="navbar navbar-default">
+		<ul  class="nav navbar-nav">
+			<li><a href="{{ url_for('signup') }}">Home</a></li>
+			<li><a href="{{ url_for('userList') }}">Softwares</a></li>
+			<li><a href="{{ url_for('showGraph') }}">Dashboard</a></li>
+			<li><a href="{{ url_for('showGraph') }}">Report</a></li>
+			<li><a href="{{ url_for('logout') }}">Logout</a></li>
+		</ul>
+	</nav>
+	</strong>
+	</div>
+	<div class="row1">
+	<div class="sideList">
+		<ul>
+			<li><a href="{{ url_for('signup') }}">Home</a></li>
+			<li><a href="{{ url_for('userList') }}">Softwares</a></li>
+			<li><a href="{{ url_for('showGraph') }}">Dashboard</a></li>
+			<li><a href="{{ url_for('showGraph') }}">Report</a></li>
+			<li><a href="{{ url_for('showGraph') }}">Software Issue</a></li>
+			<li><a href="{{ url_for('showGraph') }}">Search</a></li>
+			<li><a href="{{ url_for('showGraph') }}">Tutorial</a></li>
+			<li><a href="{{ url_for('logout') }}">Logout</a></li>
+		</ul>
+	</div>
+	 <div class="container showOnPage">
+		{% block content %}
+		{% endblock %}
+	</div>
+	</div>
+</body>
+</html>

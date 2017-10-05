@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Home</title>
+	</head>
+<body>
+	<div class="container">
+	<h1 class="logo">HomePage</h1>
+	<h2>This page is to show all data related to homepage</h2>
+	<strong><nav>
+	<ul class="menu">
+		<li><a href="{{ url_for('signup') }}">Home</a></li>
+		<li><a href="{{ url_for('about') }}">About</a></li>
+		<li><a href="{{ url_for('userList') }}">UserList</a></li>
+		<li><a href="{{ url_for('addData') }}">AddNewData</a></li>
+	</ul>
+	</nav></strong>
+	</div>
+	 <div class="container">
+		{% block content %}
+		{% endblock %}
+	</div>
+</body>
+</html>

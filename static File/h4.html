@@ -1,0 +1,20 @@
+{% extends "home.html" %}
+{% block content %}
+<div class="addNew">
+	<h1> Add New Software Detail</h1>
+	<form action = "{{ url_for('addData') }} " method = "POST">
+		<select name="selectData">
+		{% for row in rows%}
+			<option value="lst">{{ row["deptName"] }} </option>
+		{% endfor %}
+	</select><br>
+		<textarea rows="4" cols="25"></textarea><br>
+		<input name="field1" type="text"></input><br><br>
+		<input name="field2" type="text"></input><br><br>
+		<input name="field3" type="text"></input><br><br>
+		<input name="field4" type="text"></input><br><br>
+		<input name="field5" type="text"></input><br><br>
+		<input name="field1" type="submit"></input>
+		</form>
+</div>
+{% endblock %}
